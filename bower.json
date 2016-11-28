@@ -1,0 +1,22 @@
+{
+  "name": "awesome_project",
+  "description": "Your awesome project description",
+  "main": "gulpfile.js",
+  "authors": [
+    "Антон Голомазов <golomazov-tosha2012@yandex.ru>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/agolomazov/china-sale",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "1.12.4",
+    "bPopup": "bpopup#0.11.0",
+    "superplaceholder": "^0.1.1"
+  }
+}
