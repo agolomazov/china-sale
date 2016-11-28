@@ -5,6 +5,7 @@ html, body {
     font-family: Arial;
     font-size: 16px;
     font-style: normal;
+    overflow-y: hidden;
 }
 
 .clearfix {
@@ -17,4 +18,10 @@ html, body {
 }
 .clearfix:after {
     clear: both;
+}
+
+@media all and (max-width: 720px){
+    html{
+        overflow-y: auto;
+    }
 }
