@@ -1,66 +1,93 @@
-.header{
+.header {
   margin: 70px 0;
   position: relative;
   width: 100%;
 }
 
-.header-wrapper{
+.header-wrapper {
   margin: 0 auto;
   max-width: 960px;
   min-width: 320px;
 }
 
-.logo{
+.logo {
   display: block;
   float: left;
   height: 46px;
   width: 221px;
 }
 
-.logo-link{
+.logo-link {
   display: block;
   height: 100%;
   width: 100%;
 }
 
-.contacts{
+.contacts {
   float: right;
   display: block;
+  margin-top: 5px;
   position: relative;
 }
 
-.left-contact-part{
+.left-contact-part {
   margin-right: 15px;
   float: left;
 }
 
-.right-contact-part{
+.right-contact-part {
   float: right;
 }
 
 .contact-phone,
-.contact-call-phone{
+.contact-call-phone {
   display: block;
   width: 100%;
 }
 
-.contact-phone{
+.contact-phone {
   margin-bottom: 2px;
 }
 
-.contact-link{
+.contact-link {
   color: $gray;
   font: bold 1rem $RobotoFont;
   text-decoration: none;
 }
 
-.contact-call-phone__link{
+.contact-call-phone__link {
   border-bottom: 1px dashed $red-link;
   color: $red-link;
   font-size: .875rem;
   text-decoration: none;
 }
 
-.contact-call-phone__link:hover{
+.contact-call-phone__link:hover {
   border-bottom: 1px dashed transparent;
+}
+
+@media all and (max-width: 990px) {
+  .header-wrapper {
+    margin: 0 20px;
+  }
+}
+
+@media all and (max-width: 580px) {
+  .header {
+    margin: 30px 0;
+  }
+}
+
+@media all and (max-width: 480px) {
+  .header-wrapper {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+
+  .logo{
+    margin-bottom: 15px;
+  }
 }
