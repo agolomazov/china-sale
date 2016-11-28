@@ -5,24 +5,6 @@ html, body {
     font-family: Arial;
     font-size: 16px;
     font-style: normal;
-    height: 100%;
-}
-
-.page {
-    
-}
-
-.page__wrapper {
-    min-height: 100%;
-    margin-bottom: -50px;
-}
-
-* html .page__wrapper {
-    height: 100%;
-}
-
-.page__buffer {
-    height: 50px;
 }
 
 .clearfix {
