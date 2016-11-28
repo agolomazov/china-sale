@@ -29,5 +29,10 @@ superplaceholder({
     sentences: ['Укажите Ваше имя', 'Например: Иван Иванов'],
     options: superPlaceholderOptions
 });
+
+$(document).ready(function(){
+    $('.phone-customer-js').inputmask("+7(999)999-99-99");  //static mask
+
+});
 /*eslint-enable*/
 

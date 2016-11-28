@@ -17,6 +17,7 @@
   "dependencies": {
     "jquery": "1.12.4",
     "bPopup": "bpopup#0.11.0",
-    "superplaceholder": "^0.1.1"
+    "superplaceholder": "^0.1.1",
+    "jquery.inputmask": "https://github.com/RobinHerbots/Inputmask.git#^3.3.3"
   }
 }
