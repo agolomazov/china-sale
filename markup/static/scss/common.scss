@@ -1,6 +1,8 @@
 // Common styles of the project
 
 html, body {
+    background-color: #fff8e7;
+    font: 16px normal Arial;
     height: 100%;
 }
 
@@ -19,4 +21,16 @@ html, body {
 
 .page__buffer {
     height: 50px;
+}
+
+.clearfix {
+    zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
 }
