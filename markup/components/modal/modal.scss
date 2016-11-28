@@ -49,9 +49,22 @@
   border: 1px solid $red-link;
 }
 
+
 .modal-close-link .close-modal-link-img{
   height: 32px;
   width: 32px;
+
+  transform: rotate(0deg);
+  transform-origin: center center;
+
+  -webkit-transition: transform 1s ease;
+  -moz-transition: transform 1s ease;
+  -o-transition: transform 1s ease;
+  transition: transform 1s ease;
+}
+
+.modal-close-link:hover .close-modal-link-img{
+  transform: rotate(360deg);
 }
 
 .modal-close-link .close-modal-link-img path{
