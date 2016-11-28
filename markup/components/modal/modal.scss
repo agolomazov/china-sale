@@ -1,1 +1,85 @@
+.modal{
+  display: none;
+  background-color: $body-color;
+  box-sizing: border-box;
+  max-width: 480px;
+  min-width: 320px;
+  position: relative;
+  width: 100%;
+}
 
+.modal-wrapper{
+  padding: 20px;
+}
+
+.modal-close{
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+.modal-logo{
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.modal-title{
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.25rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.form-row{
+  margin-bottom: 10px;
+}
+
+.input-text{
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  box-sizing: border-box;
+  padding: 7px 10px;
+  width: 100%;
+}
+
+.input-text:focus{
+  background-color: $body-color;
+  outline: none;
+  border: 1px solid $red-link;
+}
+
+.modal-close-link .close-modal-link-img{
+  height: 32px;
+  width: 32px;
+}
+
+.modal-close-link .close-modal-link-img path{
+  fill: $red-link;
+}
+
+
+.btn-modal{
+  background-color: transparent;
+  border: 3px solid $red-link;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: $red-link;
+  text-align: center;
+  font-weight: bold;
+  font-family: $RobotoFont;
+  font-size: .875rem;
+  padding: 5px 15px;
+  text-transform: uppercase;
+  width: 100%;
+
+  -webkit-transition: all .35s ease;
+  -moz-transition: all .35s ease;
+  -o-transition: all .35s ease;
+  transition: all .35s ease;
+}
+
+.btn-modal:hover{
+  background-color: $red-link;
+  color: $white;
+}
