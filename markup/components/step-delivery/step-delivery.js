@@ -44,6 +44,12 @@ setDeliveryObject.$countProduct.on('keyup', function(e){
 
 setDeliveryObject.$deliveryBtn.on('click', function (e) {
     e.preventDefault();
+    $("html, body").animate({
+        scrollTop: 0
+    }, 200);
+    $('html').addClass('active');
+
+
     $('.content').addClass('active');
     setDeliveryObject.fiedlsetActive = 1;
 
@@ -70,7 +76,6 @@ setDeliveryObject.$btnForward.on('click', function(e){
 });
 setDeliveryObject.$btnSubmit.on('click', function(e){
     e.preventDefault();
-
     var formData = setDeliveryObject.$stepDelivery.serialize();
 
     setDeliveryObject.$btnSubmit.closest(setDeliveryObject.$fieldsets).removeClass('active').addClass('diactive').animate({

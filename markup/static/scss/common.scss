@@ -29,4 +29,8 @@ body{
         overflow-y: auto;
         overflow-x: auto;
     }
+
+    html.active{
+        overflow-y: hidden;
+    }
 }

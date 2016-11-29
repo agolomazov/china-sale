@@ -1,18 +1,18 @@
 .step-delivery-form__fieldset{
-  background-color: $white;
-  max-width: 480px;
-  min-width: 320px;
-  border: 2px solid #9a9a9a;
-  width: 100%;
-  position: fixed;
-  top: 130px;
-  left: -300vw;
-  z-index: 100;
-  -webkit-transition: all .5s linear;
-  -moz-transition: all .5s linear;
-  -o-transition: all .5s linear;
-  transition: all .5s linear;
-}
+   background-color: $white;
+   max-width: 480px;
+   min-width: 320px;
+   border: 2px solid #9a9a9a;
+   width: 100%;
+   position: fixed;
+   top: 130px;
+   left: -300vw;
+   z-index: 100;
+   -webkit-transition: all .5s linear;
+   -moz-transition: all .5s linear;
+   -o-transition: all .5s linear;
+   transition: all .5s linear;
+ }
 
 .fieldset-wrapper{
   padding: 40px;
@@ -168,5 +168,11 @@
 
   .btn-forward{
     padding: 5px 10px;
+  }
+}
+
+@media all and (max-width: 360px){
+  .label-text{
+    margin-bottom: 10px;
   }
 }

@@ -44,6 +44,10 @@ setSearchObject.$countProduct.on('keyup', function(e){
 
 setSearchObject.$deliveryBtn.on('click', function (e) {
     e.preventDefault();
+    $("html, body").animate({
+        scrollTop: 0
+    }, 200);
+    $('html').addClass('active');
     $('.content').addClass('active');
     setSearchObject.fiedlsetActive = 1;
 
