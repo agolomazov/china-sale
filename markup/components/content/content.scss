@@ -2,6 +2,15 @@
   margin-bottom: 20px;
   position: relative;
   width: 100%;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+  transform: translateY(0);
+}
+
+.content.active{
+  transform: translateY(-500vh);
 }
 
 .content:after{
@@ -17,6 +26,16 @@
   margin: 0 auto;
   z-index: 5;
   pointer-events: none;
+  opacity: 1;
+
+  -webkit-transition: all .35s ease;
+  -moz-transition: all .35s ease;
+  -o-transition: all .35s ease;
+  transition: all .35s ease;
+}
+
+.content.active:after{
+  opacity: 0;
 }
 
 .content-wrapper{

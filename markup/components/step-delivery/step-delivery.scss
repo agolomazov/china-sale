@@ -4,23 +4,14 @@
   min-width: 320px;
   border: 2px solid #9a9a9a;
   width: 100%;
-  position: absolute;
-  top: 300px;
-  left: -110vw;
+  position: fixed;
+  top: 130px;
+  left: -300vw;
   z-index: 100;
-  -webkit-transition: all 1.5s ease-in;
-  -moz-transition: all 1.5s ease-in;
-  -o-transition: all 1.5s ease-in;
-  transition: all 1.5s ease-in;
-}
-
-.step-delivery-form__fieldset.active{
-  left: 40vw;
-}
-
-.step-delivery-form__fieldset.diactive{
-  top: -100vh;
-  left: 40vw;
+  -webkit-transition: all .5s linear;
+  -moz-transition: all .5s linear;
+  -o-transition: all .5s linear;
+  transition: all .5s linear;
 }
 
 .fieldset-wrapper{
@@ -128,4 +119,54 @@
 
 .input-text.step-input.input-sm{
   max-width: 80px;
+}
+
+.success-block{
+  background-color: $white;
+  max-width: 480px;
+  min-width: 320px;
+  position: absolute;
+  top: 130px;
+  left: -300vw;
+  -webkit-transition: all .5s linear;
+  -moz-transition: all .5s linear;
+  -o-transition: all .5s linear;
+  transition: all .5s linear;
+}
+
+.success-block-wrapper{
+  color: #333;
+  font-size: 1.05rem;
+  padding: 30px;
+}
+
+.btn-forward:focus, .btn-submit:focus{
+  outline: none;
+}
+
+
+@media all and (max-width: 480px){
+  .step-delivery-form__fieldset, .success-block{
+    top: 170px;
+    width: 90%;
+  }
+
+  .fieldset-wrapper{
+    padding: 20px;
+  }
+
+  .step-delivery-form__fieldset-title{
+    font-size: 1.25rem;
+  }
+}
+
+@media all and (max-width: 410px){
+  .form-field-label{
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .btn-forward{
+    padding: 5px 10px;
+  }
 }

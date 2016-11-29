@@ -101,3 +101,9 @@
   background-color: $red-link;
   color: $white;
 }
+
+@media all and (max-width: 420px){
+  .modal-title{
+    margin: 30px;
+  }
+}

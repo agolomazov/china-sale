@@ -10,7 +10,7 @@
                     <label class="form-field-label">
                         Адрес: <input name="address" type="text" class="input-text step-input address-js" placeholder="Введите Ваш адрес">
                     </label>
-                    <button disabled class="btn btn-forward" data-to-step="2">Далее</button>
+                    <button type="button" disabled class="btn btn-forward" data-to-step="2">Далее</button>
                 </div>
             </div>
         </fieldset>
@@ -24,7 +24,7 @@
                      <label class="form-field-label">
                          Контакты: <input name="phone" type="text" class="input-text step-input phone-js" placeholder="Введите Ваш номер">
                      </label>
-                     <button disabled class="btn btn-forward" data-to-step="3">Далее</button>
+                     <button type="button" disabled class="btn btn-forward" data-to-step="3">Далее</button>
                  </div>
              </div>
          </fieldset>
@@ -45,7 +45,7 @@
                             </select>
                         </div>
                     </label>
-                    <button class="btn btn-forward" data-to-step="4">Далее</button>
+                    <button type="button" class="btn btn-forward" data-to-step="4">Далее</button>
                 </div>
             </div>
         </fieldset>
@@ -57,11 +57,17 @@
                 </div>
                 <div class="field-row">
                     <label class="form-field-label">
-                        Количество единиц товара: <input name="count-product" type="text" class="input-text step-input input-sm" placeholder="1000">
+                        Количество единиц товара: <input name="count-product" type="text" class="input-text count-product-js step-input input-sm" placeholder="1000">
                     </label>
                     <button type="submit" disabled class="btn btn-submit">Расчитать</button>
                 </div>
             </div>
         </fieldset>
     </form>
+    <div class="success-block">
+        <div class="success-block-wrapper">
+            <p>Спасибо что оставили заявку на расчет  доставки товара из Китая, наш специалист свяжется с Вами в течении 5 минут  и более детально расскажет про сроки доставки.</p>
+            <p>p.s Мы ценим свое и Ваше время, пожалуйста проверьте чтобы контактный телефон которые вы указали форме был включен.</p>
+        </div>
+    </div>
 </div>
