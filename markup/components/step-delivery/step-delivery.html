@@ -1,0 +1,67 @@
+<div class="step-delivery">
+    <form method="post" action="#" class="step-delivery-form">
+        <fieldset data-step="1" class="step-delivery-form__fieldset">
+            <div class="fieldset-wrapper">
+                <div class="step-delivery-form__fieldset-title">Расчитайте стоимость доставки из Китая за 4 шага</div>
+                <div class="step-delivery__description">
+                    Общая информация: <span class="step-delivery__info-step">Шаг 1 из 4</span>
+                </div>
+                <div class="field-row">
+                    <label class="form-field-label">
+                        Адрес: <input name="address" type="text" class="input-text step-input address-js" placeholder="Введите Ваш адрес">
+                    </label>
+                    <button disabled class="btn btn-forward" data-to-step="2">Далее</button>
+                </div>
+            </div>
+        </fieldset>
+         <fieldset data-step="2" class="step-delivery-form__fieldset">
+             <div class="fieldset-wrapper">
+                 <div class="step-delivery-form__fieldset-title">Расчитайте стоимость доставки из Китая за 4 шага</div>
+                 <div class="step-delivery__description">
+                     Общая информация: <span class="step-delivery__info-step">Шаг 2 из 4</span>
+                 </div>
+                 <div class="field-row">
+                     <label class="form-field-label">
+                         Контакты: <input name="phone" type="text" class="input-text step-input phone-js" placeholder="Введите Ваш номер">
+                     </label>
+                     <button disabled class="btn btn-forward" data-to-step="3">Далее</button>
+                 </div>
+             </div>
+         </fieldset>
+        <fieldset data-step="3" class="step-delivery-form__fieldset">
+            <div class="fieldset-wrapper">
+                <div class="step-delivery-form__fieldset-title">Расчитайте стоимость доставки из Китая за 4 шага</div>
+                <div class="step-delivery__description">
+                    Параметры доставки: <span class="step-delivery__info-step">Шаг 3 из 4</span>
+                </div>
+                <div class="field-row">
+                    <label class="form-field-label inner-select">
+                        <span class="label-text">Способ доставки:</span>
+                        <div class="select-wrapper">
+                            <select name="delivery-type" class="form-select">
+                                <option value="1">Авиадоставка</option>
+                                <option value="2">Почтой России</option>
+                                <option value="3">Зачухоным китайцем</option>
+                            </select>
+                        </div>
+                    </label>
+                    <button class="btn btn-forward" data-to-step="4">Далее</button>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset data-step="4" class="step-delivery-form__fieldset">
+            <div class="fieldset-wrapper">
+                <div class="step-delivery-form__fieldset-title">Расчитайте стоимость доставки из Китая за 4 шага</div>
+                <div class="step-delivery__description">
+                    Параметры доставки: <span class="step-delivery__info-step">Шаг 4 из 4</span>
+                </div>
+                <div class="field-row">
+                    <label class="form-field-label">
+                        Количество единиц товара: <input name="count-product" type="text" class="input-text step-input input-sm" placeholder="1000">
+                    </label>
+                    <button type="submit" disabled class="btn btn-submit">Расчитать</button>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+</div>

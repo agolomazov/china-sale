@@ -1,0 +1,131 @@
+.step-delivery-form__fieldset{
+  background-color: $white;
+  max-width: 480px;
+  min-width: 320px;
+  border: 2px solid #9a9a9a;
+  width: 100%;
+  position: absolute;
+  top: 300px;
+  left: -110vw;
+  z-index: 100;
+  -webkit-transition: all 1.5s ease-in;
+  -moz-transition: all 1.5s ease-in;
+  -o-transition: all 1.5s ease-in;
+  transition: all 1.5s ease-in;
+}
+
+.step-delivery-form__fieldset.active{
+  left: 40vw;
+}
+
+.step-delivery-form__fieldset.diactive{
+  top: -100vh;
+  left: 40vw;
+}
+
+.fieldset-wrapper{
+  padding: 40px;
+}
+
+.step-delivery-form__fieldset-title{
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.step-delivery__description{
+  font-size: .875rem;
+  margin-bottom: 20px;
+}
+
+.step-delivery__info-step{
+  color: #666;
+  font-style: italic;
+}
+
+.form-field-label{
+  cursor: pointer;
+}
+
+.input-text.step-input{
+  max-width: 200px;
+  margin-right: 5px;
+}
+
+.btn-forward, .btn-submit{
+  background-color: $red-link;
+  border: 1px solid $red-link-hover;
+  border-radius: 5px;
+  color: $white;
+  cursor: pointer;
+  padding: 5px 10px;
+  font-size: .875rem;
+}
+
+.btn-forward[disabled], .btn-submit[disabled]{
+  background-color: lighten($red-link, 20%);
+}
+
+.select-wrapper{
+  position: relative;
+  float: left;
+  bottom: 3px;
+  max-width: 150px;
+  margin-right: 5px;
+  height: 25px;
+  border: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.form-field-label.inner-select + .btn-forward{
+  position: relative;
+  top: -2px;
+}
+
+.select-wrapper:before{
+  content: '';
+  display: block;
+  width: 20px;
+  height: 25px;
+  background-color: #fff;
+  border-left: 1px solid #ddd;
+  top: 0px;
+  position: absolute;
+  right: 0px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.select-wrapper:after{
+  content: '';
+  border-style: solid;
+  border-width: 3px 3px 0 3px;
+  border-color: #333 transparent transparent transparent;
+  position: absolute;
+  top: 50%;
+  right: 7px;
+  z-index: 2;
+  margin-top: -2px;
+  pointer-events: none;
+}
+
+.select-wrapper select{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: none;
+  height: 100%;
+  width: 100%;
+  padding: 0 10px;
+}
+
+.select-wrapper select:focus{
+  outline: none;
+}
+
+.label-text{
+  float: left;
+  margin-right: 5px;
+}
+
+.input-text.step-input.input-sm{
+  max-width: 80px;
+}
