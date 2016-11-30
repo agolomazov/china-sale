@@ -26,11 +26,12 @@ body{
 
 @media all and (max-width: 720px){
     html{
-        overflow-y: auto;
         overflow-x: auto;
+        overflow-y: auto;
     }
 
     html.active{
+        overflow-x: hidden;
         overflow-y: hidden;
     }
 }

@@ -55,9 +55,15 @@ setDeliveryObject.$deliveryBtn.on('click', function (e) {
 
     // Получаем ширину певого блока формы
     var $widthFieldset = setDeliveryObject.$fieldsets.eq(setDeliveryObject.fiedlsetActive - 1).addClass('active').width();
+    var $heightFieldSet = setDeliveryObject.$fieldsets.eq(setDeliveryObject.fiedlsetActive - 1).addClass('active').height();
     var $windowWidth = $(window).width();
+    var $windowHeight = $(window).height();
     var $fieldToSetWidth = ($windowWidth / 2) - ($widthFieldset / 2);
-    setDeliveryObject.$fieldsets.eq(setDeliveryObject.fiedlsetActive - 1).animate({
+    var $fieldToSetHeight = ($windowHeight / 2) - ($heightFieldSet / 2);
+
+    setDeliveryObject.$fieldsets.eq(setDeliveryObject.fiedlsetActive - 1).css({
+        top: $fieldToSetHeight + 'px'
+    }).animate({
         'left': $fieldToSetWidth + 'px'
     }, 200);
 });
@@ -68,9 +74,14 @@ setDeliveryObject.$btnForward.on('click', function(e){
     }, 500);
 
     var $widthFieldset = setDeliveryObject.$fieldsets.eq(setDeliveryObject.fiedlsetActive - 1).width();
+    var $heightFieldset = setDeliveryObject.$fieldsets.eq(setDeliveryObject.fiedlsetActive - 1).height();
     var $windowWidth = $(window).width();
+    var $windowHeight = $(window).height();
     var $fieldToSetWidth = ($windowWidth / 2) - ($widthFieldset / 2);
-    setDeliveryObject.$fieldsets.eq(setDeliveryObject.fiedlsetActive - 1).animate({
+    var $fieldToSetHeight = ($windowHeight / 2) - ($heightFieldset / 2);
+    setDeliveryObject.$fieldsets.eq(setDeliveryObject.fiedlsetActive - 1).css({
+        top: $fieldToSetHeight + 'px'
+    }).animate({
         'left': $fieldToSetWidth + 'px'
     }, 200).addClass('active');
 });
@@ -83,33 +94,35 @@ setDeliveryObject.$btnSubmit.on('click', function(e){
     }, 500);
 
     var $successBlockWidth = setDeliveryObject.$successBlock.width();
+    var $successBlockHeight = setDeliveryObject.$successBlock.height();
     var $windowWidth = $(window).width();
+    var $windowHeight = $(window).height();
     var $successBlockWidthSet = ($windowWidth / 2) - ($successBlockWidth / 2);
+    var $successBlockHeightSet = ($windowHeight / 2) - ($successBlockHeight / 2);
 
-    setDeliveryObject.$successBlock.addClass('active').delay(800).animate({
+    setDeliveryObject.$successBlock.addClass('active').css({
+        top: $successBlockHeightSet + 'px'
+    }).delay(800).animate({
         left: $successBlockWidthSet + 'px'
     }, 200);
 });
 
 $(window).on('resize', function () {
     var $windowWidth = $(this).width();
+    var $windowHeight = $(this).height();
     var $fiedsetActive = $('.step-delivery .step-delivery-form__fieldset.active')
     var $fieldSetActiveWidth = $fiedsetActive.width();
+    var $fieldSetActiveHeight = $fiedsetActive.height();
     var $successBlockActive = $('.step-delivery .success-block.active');
     var $successBlockActiveWidth = $successBlockActive.width();
+    var $successBlockActiveHeight = $successBlockActive.height();
 
     var $fieldSetActiveSet = ($windowWidth / 2) - ($fieldSetActiveWidth / 2);
+    var $fieldSetActiveSetHeight = ($windowHeight / 2) - ($fieldSetActiveHeight / 2);
     var $successBlockActiveSet = ($windowWidth / 2) - ($successBlockActiveWidth / 2);
+    var $successBlockActiveSetHeight = ($windowHeight / 2) - ($successBlockActiveHeight / 2);
 
-    $fiedsetActive.css({left: $fieldSetActiveSet + 'px'});
-    $successBlockActive.css({left: $successBlockActiveSet + 'px'});
-
-    if($windowWidth <= 480){
-        $fiedsetActive.css({top: 170 + 'px'});
-        $successBlockActive.css({top: 170 + 'px'});
-    } else {
-        $fiedsetActive.css({top: 130 + 'px'});
-        $successBlockActive.css({top: 130 + 'px'});
-    }
+    $fiedsetActive.css({left: $fieldSetActiveSet + 'px', top: $fieldSetActiveSetHeight + 'px'});
+    $successBlockActive.css({left: $successBlockActiveSet + 'px', top: $successBlockActiveSetHeight + 'px'});
 });
 /*eslint-enable*/

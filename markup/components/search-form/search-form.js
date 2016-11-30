@@ -53,9 +53,14 @@ setSearchObject.$deliveryBtn.on('click', function (e) {
 
     // Получаем ширину певого блока формы
     var $widthFieldset = setSearchObject.$fieldsets.eq(setSearchObject.fiedlsetActive - 1).addClass('active').width();
+    var $heightFieldset = setSearchObject.$fieldsets.eq(setSearchObject.fiedlsetActive - 1).addClass('active').height();
     var $windowWidth = $(window).width();
+    var $windowHeight = $(window).height();
     var $fieldToSetWidth = ($windowWidth / 2) - ($widthFieldset / 2);
-    setSearchObject.$fieldsets.eq(setSearchObject.fiedlsetActive - 1).animate({
+    var $fieldToSetHeight = ($windowHeight / 2) - ($heightFieldset / 2);
+    setSearchObject.$fieldsets.eq(setSearchObject.fiedlsetActive - 1).css({
+        top: $fieldToSetHeight + 'px'
+    }).animate({
         'left': $fieldToSetWidth + 'px'
     }, 200);
 });
@@ -66,9 +71,14 @@ setSearchObject.$btnForward.on('click', function(e){
     }, 500);
 
     var $widthFieldset = setSearchObject.$fieldsets.eq(setSearchObject.fiedlsetActive - 1).width();
+    var $heightFieldset = setSearchObject.$fieldsets.eq(setSearchObject.fiedlsetActive - 1).height();
     var $windowWidth = $(window).width();
+    var $windowHeight = $(window).height();
     var $fieldToSetWidth = ($windowWidth / 2) - ($widthFieldset / 2);
-    setSearchObject.$fieldsets.eq(setSearchObject.fiedlsetActive - 1).animate({
+    var $fieldToSetHeight = ($windowHeight / 2) - ($heightFieldset / 2);
+    setSearchObject.$fieldsets.eq(setSearchObject.fiedlsetActive - 1).css({
+        top: $fieldToSetHeight + 'px'
+    }).animate({
         'left': $fieldToSetWidth + 'px'
     }, 200).addClass('active');
 });
@@ -82,33 +92,35 @@ setSearchObject.$btnSubmit.on('click', function(e){
     }, 500);
 
     var $successBlockWidth = setSearchObject.$successBlock.width();
+    var $successBlockHeight = setSearchObject.$successBlock.height();
     var $windowWidth = $(window).width();
+    var $windowHeight = $(window).height();
     var $successBlockWidthSet = ($windowWidth / 2) - ($successBlockWidth / 2);
+    var $successBlockHeightSet = ($windowHeight / 2) - ($successBlockHeight / 2);
 
-    setSearchObject.$successBlock.addClass('active').delay(800).animate({
+    setSearchObject.$successBlock.addClass('active').css({
+        top: $successBlockHeightSet + 'px'
+    }).delay(800).animate({
         left: $successBlockWidthSet + 'px'
     }, 200);
 });
 
 $(window).on('resize', function () {
     var $windowWidth = $(this).width();
+    var $windowHeight = $(this).height();
     var $fiedsetActive = $('.search-product .search-product-form__fieldset.active')
     var $fieldSetActiveWidth = $fiedsetActive.width();
+    var $fieldSetActiveHeight = $fiedsetActive.height();
     var $successBlockActive = $('.search-product .success-search-product-block.active');
     var $successBlockActiveWidth = $successBlockActive.width();
+    var $successBlockActiveHeight = $successBlockActive.height();
 
     var $fieldSetActiveSet = ($windowWidth / 2) - ($fieldSetActiveWidth / 2);
+    var $fieldSetActiveSetHeight = ($windowHeight / 2) - ($fieldSetActiveHeight / 2);
     var $successBlockActiveSet = ($windowWidth / 2) - ($successBlockActiveWidth / 2);
+    var $successBlockActiveSetHeight = ($windowHeight / 2) - ($successBlockActiveHeight / 2);
 
-    $fiedsetActive.css({left: $fieldSetActiveSet + 'px'});
-    $successBlockActive.css({left: $successBlockActiveSet + 'px'});
-
-    if($windowWidth <= 480){
-        $fiedsetActive.css({top: 170 + 'px'});
-        $successBlockActive.css({top: 170 + 'px'});
-    } else {
-        $fiedsetActive.css({top: 130 + 'px'});
-        $successBlockActive.css({top: 130 + 'px'});
-    }
+    $fiedsetActive.css({left: $fieldSetActiveSet + 'px', top: $fieldSetActiveSetHeight + 'px'});
+    $successBlockActive.css({left: $successBlockActiveSet + 'px', top: $successBlockActiveSetHeight + 'px'});
 });
 /*eslint-enable*/
